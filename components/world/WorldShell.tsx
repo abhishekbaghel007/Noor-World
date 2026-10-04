@@ -47,13 +47,13 @@ export function WorldShell({ children }: WorldShellProps) {
   return (
     <WorldShellContext.Provider value={{ tab, setTab, nightMode, toggleNightMode: () => setNightMode(!nightMode) }}>
       <ToastProvider>
-        <div className={'min-h-screen bg-' + (nightMode ? '#18231d' : '#fff9e9') + ' text-' + (nightMode ? '#f9f0df' : '#493c34') + ' transition-colors duration-300'}>
+        <div className={nightMode ? 'nw-shell nw-night' : 'nw-shell'}>
           <TopBar 
             onThemeToggle={() => setNightMode(!nightMode)} 
             title='Noor World'
             subtitle='her little corner of the internet'
           />
-          <main className='flex-1 px-4 sm:px-6 lg:px-8 pb-12'>
+          <main className='nw-main'>
             {children}
           </main>
           <BottomNav 
