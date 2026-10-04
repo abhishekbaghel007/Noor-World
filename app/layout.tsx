@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next'
 import './globals.css'
+import './noor-theme.css'
 import { WorldShell } from './components/world/WorldShell'
 
 export const metadata: Metadata = {
